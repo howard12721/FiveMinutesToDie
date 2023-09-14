@@ -1,6 +1,7 @@
 package jp.xhw.fiveminutestodie;
 
 import dev.jorel.commandapi.CommandAPIBukkitConfig;
+import dev.jorel.commandapi.CommandPermission;
 import jp.xhw.fiveminutestodie.config.Settings;
 import jp.xhw.fiveminutestodie.player.GamePlayerHandler;
 import lombok.Getter;
@@ -59,18 +60,21 @@ public final class FiveMinutesToDie extends JavaPlugin {
 
     private void registerCommands() {
         new CommandAPICommand("timebomb")
+                .withPermission(CommandPermission.OP)
                 .withSubcommand(
                         new CommandAPICommand("enable")
                                 .executes(((commandSender, commandArguments) -> {
                                     gamePlayerHandler.enable();
                                 }))
                 )
+                .withPermission(CommandPermission.OP)
                 .withSubcommand(
                         new CommandAPICommand("disable")
                                 .executes(((commandSender, commandArguments) -> {
                                     gamePlayerHandler.disable();
                                 }))
                 )
+                .withPermission(CommandPermission.OP)
                 .withSubcommand(
                         new CommandAPICommand("reload")
                                 .executes((commandSender, commandArguments) -> {
