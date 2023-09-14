@@ -4,6 +4,8 @@
 
 Spigot 1.20
 
+ダウンロードは[**こちら**](https://github.com/howard12721/FiveMinutesToDie/releases/latest)
+
 ## 💡 使い方
 
 ### 💬コマンド
