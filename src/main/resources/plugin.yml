@@ -1,0 +1,4 @@
+name: FiveMinutesToDie
+version: '${project.version}'
+main: jp.xhw.fiveminutestodie.FiveMinutesToDie
+api-version: '1.20'
